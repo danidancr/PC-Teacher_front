@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro PC Teacher</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* CSS INLINE PARA SIMPLICIDADE E CONSISTÊNCIA COM O LOGIN SIMPLIFICADO */
+        :root {
+            --color-primary-dark: #1F192F; /* Fundo dos Cursos e Áreas Escuras */
+            --color-primary-light: #FFFFFF; /* Fundo Geral Claro */
+            --color-accent-blue: #1F192F; /* Cor do botão primário (pode ser ajustada) */
+            --color-blue: #2D6073 ;
+            --color-text-dark: #000000;
+            --color-text-light: #ffffff;
+            --font-family: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-family);
+        }
+
+        body {
+            background-color: var(--color-blue);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .register-box {
+            background-color: white;
+            padding: 30px 40px; /* Reduz o padding vertical de 40px para 30px */
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            margin: 20px; /* Reduz a margem externa */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary-dark);
+            text-decoration: none;
+            margin-bottom: 25px;
+        }
+
+        .logo-icon {
+            color: var(--color-logo-icon);
+            font-size: 1.8rem; 
+            margin-right: 8px;
+        }
+
+        h2 {
+            font-size: 1.6rem; /* Reduz o tamanho da fonte de 1.8rem para 1.6rem */
+            font-weight: 600;
+            margin-bottom: 25px; /* Reduz o espaçamento abaixo do título de 30px para 25px */
+            color: var(--color-primary-dark);
+        }
+
+        .input-group {
+            margin-bottom: 12px; /* Reduz o espaçamento entre inputs de 15px para 12px */
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: var(--color-text-dark);
+            font-size: 0.95rem;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px; /* Reduz o padding vertical de 12px para 10px */
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 0.95rem; /* Levemente menor */
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: var(--color-primary-dark);
+            outline: none;
+            box-shadow: 0 0 0 1px var(--color-primary-dark);
+        }
+
+        /* Botão Principal de Cadastro */
+        .btn-primary-register {
+            width: 100%;
+            padding: 10px; /* Reduz o padding vertical de 12px para 10px */
+            background-color: var(--color-primary-dark); 
+            color: var(--color-text-light);
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem; /* Reduz o tamanho da fonte de 1.1rem para 1rem */
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 15px; /* Reduz o espaçamento acima de 20px para 15px */
+        }
+
+        .btn-primary-register:hover {
+            opacity: 0.9;
+        }
+        
+        /* Link para Login (Rodapé do Box) */
+        .login-link-group {
+            text-align: center;
+            margin-top: 15px; /* Reduz o espaçamento acima de 20px para 15px */
+            font-size: 0.9rem;
+        }
+
+        .login-link-group a {
+            color: var(--color-primary-dark);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .login-link-group a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade em Mobile */
+        @media (max-width: 450px) {
+            .register-box {
+                padding: 30px 25px;
+                box-shadow: none; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-box">
+
+        <h2>Cadastrar</h2>
+        
+        <form action="#" method="POST">
+            
+            <div class="input-group">
+                <label for="name">Nome Completo</label>
+                <input type="text" id="name" name="name" required placeholder="Digite seu nome">
+            </div>
+            
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required placeholder="Crie uma senha">
+            </div>
+
+            <div class="input-group">
+                <label for="confirm-password">Confirmar Senha</label>
+                <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirme sua senha">
+            </div>
+            
+            <button type="submit" class="btn-primary-register">Criar Conta</button>
+            
+            <div class="login-link-group">
+                <p>Já tem uma conta? <a href="login.html">Fazer Login</a></p>
+            </div>
+            
+        </form>
+        
+    </div>
+
+</body>
+</html>
